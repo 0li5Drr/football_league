@@ -6,7 +6,7 @@ use super::team::Team;
 static mut NEXT_PLAYER_ID : Mutex<u32> = Mutex::new(0);
 
 // Skills have a Value from 1-255
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Skills {
     pub pace : u8,
     pub power : u8,
@@ -16,7 +16,7 @@ pub struct Skills {
 }
 
 /// Represents a Player in the League
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Player {
     pub name : String,
     pub first_name : String,
